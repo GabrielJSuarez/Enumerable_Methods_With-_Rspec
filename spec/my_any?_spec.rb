@@ -40,8 +40,8 @@ describe Enumerable do
     end
 
     context '.my_any? returning values with a Numeric pattern given' do
-      let(:arr_numeric_true) { [1, "hello", 1.0] }
-      let(:arr_numeric_false) { ["hi", "hola", 'hello'] }
+      let(:arr_numeric_true) { [1, 'hello', 1.0] }
+      let(:arr_numeric_false) { %w[hi hola hello] }
 
       example 'Behaves the same ass #any? with a Numeric pattern' do
         expect(arr_numeric_true.my_any?(Numeric)).to eq(arr_numeric_true.any?(Numeric))

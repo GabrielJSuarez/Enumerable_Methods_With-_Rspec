@@ -27,4 +27,3 @@ describe Enumerable do
     end
   end
 end
-

@@ -14,6 +14,10 @@
 - my_map_proc
 - my_inject
 
+> Test suite:
+
+- Test cases for each method built
+
 ## Built With
 
 - Ruby
@@ -36,14 +40,6 @@ You should have Ruby installed to run this.
 - Github: [@ginnandjuice](https://github.com/ginnandjuice)
 - Twitter: [@fatbaxxter](https://twitter.com/fatbaxxter)
 - Linkedin: [Gabriel Suárez](https://www.linkedin.com/in/gabriel-su%C3%A1rez-torres-85125a1ab/)
-
-
-
-👤 **karmaester**
-
-- Github: [@githubhandle](https://github.com/karmaester)
-- Twitter: [@twitterhandle](https://twitter.com/karmaendlich)
-- Linkedin: [linkedin](https://www.linkedin.com/in/khristian-rojas/)
 
 ## 🤝 Contributing
 

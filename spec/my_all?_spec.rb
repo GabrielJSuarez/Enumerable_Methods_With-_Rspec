@@ -42,6 +42,10 @@ describe Enumerable do
       let(:arr_numeric_true) { [1, 2.0, 1i] }
       let(:arr_numeric_false) { [1, 2.0, 'hello'] }
 
+      example 'Behaves the same ass #all? with a Numeric pattern' do
+        expect(arr_numeric_true.my_all?(Numeric)).to eq(arr_numeric_true.all?(Numeric))
+      end
+
       example 'Returns true when every element is Numeric' do
         expect(arr_numeric_true.my_all?(Numeric)).to eq(true)
       end
@@ -55,6 +59,10 @@ describe Enumerable do
       let(:arr_regexp_true) { %w[hello hi hola] }
       let(:arr_regexp_false) { %w[ola olla hola] }
 
+      example 'Behaves the same ass #all? with a regexp pattern' do
+        expect(arr_regexp_true.my_all?(/h/)).to eq(arr_regexp_true.all?(/h/))
+      end
+
       example 'Returns true when every element is Regexp' do
         expect(arr_regexp_true.my_all?(/h/)).to eq(true)
       end
@@ -65,6 +73,10 @@ describe Enumerable do
     end
 
     context '.my_all returning values when an empty array is passed' do
+      example 'Behaves the same ass #all? witn an empty array' do
+        expect([].my_all?).to eq([].all?)
+      end
+
       example 'Returns true with an empty array' do
         expect([].my_all?).to eq(true)
       end

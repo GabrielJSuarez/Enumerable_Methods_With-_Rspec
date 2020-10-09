@@ -31,7 +31,7 @@
 
 - To run the enumerable.rb script you can type in the console 'bin/enumerable.rb'
 
-- To run the Rspec test suit just type in the console 'rspec'
+- To run the Rspec test suit just type in the console 'rspec' and the test suit will run
 
 ## Authors
 

@@ -9,25 +9,27 @@ describe Enumerable do
   let(:range) { (1..3) }
   let(:arr_truthy) { [true, false, nil] }
   let(:arr_falsy) { [false, false, nil] }
+  let(:block_true) { proc { |x| x > 4 } }
+  let(:block_false) { proc { |x| x > 1 } }
 
   describe '.my_none?' do
     context '#my_none? behaviour' do
       example 'behaves has .none?, takes an array, evaluates to true' do
-        expect(arr.my_none? { |x| x > 4 }).to eq(arr.none? { |x| x > 4 })
+        expect(arr.my_none?(&block_true)).to eq(arr.none?(&block_true))
       end
 
       example 'behaves has .none?, takes a range, evaluates to false' do
-        expect(range.my_none? { |x| x > 1 }).to eq(range.none? { |x| x > 1 })
+        expect(range.my_none?(&block_false)).to eq(range.none?(&block_false))
       end
     end
 
     context '.my_none? returning values with/out block given' do
       example 'Returns true when no conditions are met' do
-        expect(range.my_none? { |x| x > 4 }).to eq(true)
+        expect(range.my_none?(&block_true)).to eq(true)
       end
 
       example 'Returns false when some condition are met' do
-        expect(range.my_none? { |x| x > 2 }).to eq(false)
+        expect(range.my_none?(&block_false)).to eq(false)
       end
 
       example 'When block given return true if no element is truthy' do

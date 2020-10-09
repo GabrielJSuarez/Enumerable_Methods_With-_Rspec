@@ -173,3 +173,9 @@ end
 def multiply_els(arr)
   arr.my_inject(1, :*)
 end
+
+arr = Proc.new { |i| i*i }
+
+var = (1..4).my_map(&arr)
+
+p var

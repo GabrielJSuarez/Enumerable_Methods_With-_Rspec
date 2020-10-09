@@ -1,6 +1,6 @@
 # frozen_string_literal: true
 
-require './bin/script.rb'
+require './bin/enumerable.rb'
 
 describe Enumerable do
   let(:arr) { [1, 2, 3] }

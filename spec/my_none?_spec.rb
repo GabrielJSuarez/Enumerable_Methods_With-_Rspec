@@ -1,6 +1,6 @@
 # frozen_string_literal: true
 
-require './bin/script.rb'
+require './bin/enumerable.rb'
 
 # rubocop:disable Metrics/BlockLength
 

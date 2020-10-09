@@ -6,6 +6,8 @@ require './bin/script.rb'
 
 describe Enumerable do
   let(:arr) { [1, 2, 3] }
+  let(:block) { proc { |x, y| x + y } }
+  let(:block_conditions) { proc { |x, y| x > y ? x : y } }
 
   describe '.my_inject' do
     context '#my_inject behaviour' do
@@ -32,7 +34,7 @@ describe Enumerable do
 
     context '.my_inject return values' do
       example 'takes a block, return a single value' do
-        expect(arr.my_inject { |x, y| x + y }).to eq(6)
+        expect(arr.my_inject(&block)).to eq(6)
       end
 
       example 'takes a symbol, return a single value' do
@@ -40,7 +42,7 @@ describe Enumerable do
       end
 
       example 'takes a block and a initial value, return a single value' do
-        expect(arr.my_inject(5) { |x, y| x + y }).to eq(11)
+        expect(arr.my_inject(5,&block)).to eq(11)
       end
 
       example 'takes a symbol and a initial value, return a single value' do
@@ -48,7 +50,7 @@ describe Enumerable do
       end
 
       example 'check conditions, return a single value' do
-        expect(arr.my_inject { |x, y| x > y ? x : y }).to eq(3)
+        expect(arr.my_inject(&block_conditions)).to eq(3)
       end
     end
   end

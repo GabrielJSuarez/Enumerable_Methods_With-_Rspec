@@ -9,6 +9,8 @@ describe Enumerable do
   let(:range) { (1..3) }
   let(:arr_truthy) { [true, false, nil] }
   let(:arr_falsy) { [false, false, nil] }
+  let(:block_true) { proc { |x| x > 0 } }
+  let(:block_false) { proc { |x| x > 1 } }
 
   describe '.my_any?' do
     context '#my_any? behaviour' do

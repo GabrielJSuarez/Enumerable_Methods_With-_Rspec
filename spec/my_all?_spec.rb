@@ -8,25 +8,27 @@ describe Enumerable do
   let(:arr) { [1, 2, 3] }
   let(:range) { (1..3) }
   let(:arr_falsy) { [1, 2, nil] }
+  let(:block_true) { proc { |x| x > 0 } }
+  let(:block_false) { proc { |x| x > 1 } }
 
   describe '.my_all' do
     context '#my_all behaviour' do
       example 'behaves has .all?, takes an array, evaluates to true' do
-        expect(arr.my_all? { |x| x > 0 }).to eq(arr.all? { |x| x > 0 })
+        expect(arr.my_all?(&block_true)).to eq(arr.all?(&block_true))
       end
 
       example 'behaves has .all?, takes a range, evaluates to false' do
-        expect(range.my_all? { |x| x > 1 }).to eq(range.all? { |x| x > 1 })
+        expect(range.my_all?(&block_false)).to eq(range.all?(&block_false))
       end
     end
 
     context '.my_all returning values with/out block given' do
       example 'Returns true when every condition is met' do
-        expect(range.my_all? { |x| x > 0 }).to eq(true)
+        expect(range.my_all?(&block_true)).to eq(true)
       end
 
       example 'Returns false when every condition is noy met' do
-        expect(range.my_all? { |x| x > 1 }).to eq(false)
+        expect(range.my_all?(&block_false)).to eq(false)
       end
 
       example 'When block given return true if all elements are truthy' do

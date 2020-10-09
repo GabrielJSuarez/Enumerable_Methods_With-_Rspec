@@ -16,11 +16,11 @@
 
 > Test suite:
 
-- Test cases for each method built
+- Test cases for each method built with Rspec
 
 ## Built With
 
-- Ruby
+- Ruby, tested with Rspec
 
 ## Repl
 
@@ -29,9 +29,9 @@
 
 ## Getting Started
 
-You should have Ruby installed to run this.
+- To run the enumerable.rb script you can type in the console 'bin/enumerable.rb'
 
-
+- To run the Rspec test suit just type in the console 'rspec'
 
 ## Authors
 
@@ -55,6 +55,7 @@ Give a ⭐️ if you like this project!
 
 - This was built following the guidelines from The Odin Project:
 https://github.com/TheOdinProject/curriculum/blob/master/ruby_programming/archive/basic_ruby/project_advanced_building_blocks.md#project-2-enumerable-methods
+
 ## 📝 License
 
 This project is [MIT](lic.url) licensed.

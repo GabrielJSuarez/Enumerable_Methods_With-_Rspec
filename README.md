@@ -22,13 +22,16 @@
 
 - Ruby, tested with Rspec
 
+![screenshot](screenshot/Screenshot.png)
+
 ## Repl
 
-[![Run on Repl.it](https://repl.it/badge/github/GabrielJSuarez/Enumerable_Methods_With-_Rspec)](https://repl.it/github/GabrielJSuarez/Enumerable_Methods_With-_Rspec)
+[Click for live webpage](https://repl.it/@GinnLaiho/EnumerableMethodsWith-Rspec#bin/main.rb)
+
 
 ## Getting Started
 
-- To run the enumerable.rb script you can type in the console 'bin/enumerable.rb'
+- To run the enumerable.rb script you can type in the console 'bin/main.rb'
 
 - To run the Rspec test suit just type in the console 'rspec' and the test suit will run
 

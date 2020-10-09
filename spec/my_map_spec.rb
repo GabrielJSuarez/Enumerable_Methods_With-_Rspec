@@ -1,6 +1,6 @@
 # frozen_string_literal: true
 
-require './bin/enumerable'
+require './bin/main'
 
 describe Enumerable do
   let(:arr) { [1, 2, 3] }

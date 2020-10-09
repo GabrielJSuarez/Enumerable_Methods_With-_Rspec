@@ -1,6 +1,6 @@
 # frozen_string_literal: true
 
-require './bin/enumerable'
+require './bin/main'
 
 # rubocop:disable Metrics/BlockLength
 

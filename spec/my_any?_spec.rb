@@ -1,8 +1,4 @@
-# frozen_string_literal: true
-
 require './bin/main'
-
-# rubocop:disable Metrics/BlockLength
 
 describe Enumerable do
   let(:arr) { [1, 2, 3] }
@@ -86,5 +82,3 @@ describe Enumerable do
     end
   end
 end
-
-# rubocop:enable Metrics/BlockLength

@@ -1,8 +1,4 @@
-# frozen_string_literal: true
-
 require './bin/main'
-
-# rubocop:disable Metrics/BlockLength
 
 describe Enumerable do
   let(:arr) { [1, 2, 3] }
@@ -42,7 +38,7 @@ describe Enumerable do
       end
 
       example 'takes a block and a initial value, return a single value' do
-        expect(arr.my_inject(5,&block)).to eq(11)
+        expect(arr.my_inject(5, &block)).to eq(11)
       end
 
       example 'takes a symbol and a initial value, return a single value' do
@@ -55,5 +51,3 @@ describe Enumerable do
     end
   end
 end
-
-# rubocop:enable Metrics/BlockLength

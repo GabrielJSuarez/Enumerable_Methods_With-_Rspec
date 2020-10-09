@@ -1,5 +1,3 @@
-# frozen_string_literal: true
-
 require './bin/main'
 
 describe Enumerable do

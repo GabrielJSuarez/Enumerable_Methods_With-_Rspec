@@ -173,6 +173,3 @@ end
 def multiply_els(arr)
   arr.my_inject(1, :*)
 end
-
-
-puts [1, 2, 3].all? {|x| x > 0}

@@ -26,7 +26,7 @@
 
 ## Repl
 
-[Click for live webpage](https://repl.it/@GinnLaiho/EnumerableMethodsWith-Rspec#bin/main.rb)
+[Live Demo for main and tests](https://repl.it/@GinnLaiho/EnumerableMethodsWith-Rspec#bin/main.rb)
 
 
 ## Getting Started

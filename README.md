@@ -24,8 +24,7 @@
 
 ## Repl
 
-[live view](https://repl.it/@karmaester/Enumerable-methods#main.rb)
-
+[![Run on Repl.it](https://repl.it/badge/github/GabrielJSuarez/Enumerable_Methods_With-_Rspec)](https://repl.it/github/GabrielJSuarez/Enumerable_Methods_With-_Rspec)
 
 ## Getting Started
 

@@ -10,26 +10,26 @@ describe Enumerable do
   let(:arr_truthy) { [true, false, nil] }
   let(:arr_falsy) { [false, false, nil] }
   let(:block_true) { proc { |x| x > 0 } }
-  let(:block_false) { proc { |x| x > 1 } }
+  let(:block_false) { proc { |x| x > 4 } }
 
   describe '.my_any?' do
     context '#my_any? behaviour' do
       example 'behaves has .any?, takes an array, evaluates to true' do
-        expect(arr.my_any? { |x| x > 1 }).to eq(arr.any? { |x| x > 1 })
+        expect(arr.my_any?(&block_true)).to eq(arr.any?(&block_true))
       end
 
       example 'behaves has .any?, takes a range, evaluates to false' do
-        expect(range.my_any? { |x| x > 4 }).to eq(range.any? { |x| x > 4 })
+        expect(range.my_any?(&block_false)).to eq(range.any?(&block_false))
       end
     end
 
     context '.my_any? returning values with/out block given' do
       example 'Returns true when some conditions are met' do
-        expect(range.my_any? { |x| x > 1 }).to eq(true)
+        expect(range.my_any?(&block_true)).to eq(true)
       end
 
       example 'Returns false when not one condition is met' do
-        expect(range.my_any? { |x| x > 4 }).to eq(false)
+        expect(range.my_any?(&block_false)).to eq(false)
       end
 
       example 'When block given return true if some elements are truthy' do

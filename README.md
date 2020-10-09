@@ -22,7 +22,7 @@
 
 - Ruby, tested with Rspec
 
-![screenshot](screenshot/Screenshot.png)
+[screenshot](https://github.com/GabrielJSuarez/Enumerable_Methods_With-_Rspec/blob/TDD_rspec/screenshot/screenshot.png)
 
 ## Repl
 
